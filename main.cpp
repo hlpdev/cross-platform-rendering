@@ -13,7 +13,7 @@ int main() {
 
     try {
         glfwSetErrorCallback([](int error, const char* description) {
-            spdlog::error("A GLFW error occurred: %s", description);
+            spdlog::error("A GLFW error occurred: {}", description);
         });
 
         if (!glfwInit()) {
